@@ -1,5 +1,14 @@
 .checkbox-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.list {
+  padding-top: 1px;
+  border-top: 1px solid #cdcdcd;
+  height: 224px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

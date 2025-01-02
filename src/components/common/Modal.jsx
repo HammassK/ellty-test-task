@@ -7,7 +7,6 @@ const Modal = () => {
     <div className="modal">
       <div className="modal-content">
         <CheckboxList />
-        <hr className="divider" />
         <div className="button-container">
           <Button label="Done" />
         </div>

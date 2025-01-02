@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CheckboxItem from "./CheckboxItem";
 import "./CheckboxList.css";
 
@@ -9,6 +9,8 @@ const CheckboxList = () => {
     { label: "Page 2", checked: false },
     { label: "Page 3", checked: false },
     { label: "Page 4", checked: false },
+    { label: "Page 5", checked: false },
+    { label: "Page 6", checked: false },
   ]);
 
   const handleCheckboxChange = (index) => {
@@ -27,16 +29,21 @@ const CheckboxList = () => {
 
   return (
     <div className="checkbox-list">
-      {items.map((item, index) => (
-        <React.Fragment key={index}>
+      <CheckboxItem
+        label={items?.[0]?.label}
+        checked={items?.[0]?.checked}
+        onChange={() => handleCheckboxChange(0)}
+      />
+      <div className="list">
+        {items.slice(1, 7).map((item, index) => (
           <CheckboxItem
+            key={index}
             label={item.label}
             checked={item.checked}
-            onChange={() => handleCheckboxChange(index)}
+            onChange={() => handleCheckboxChange(index + 1)}
           />
-          {index === 0 && <hr className="divider" />}
-        </React.Fragment>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,20 +1,60 @@
 .checkbox-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: space-between;
+  height: 42px;
 }
 
 .checkbox-item input {
-    margin-right: 10px;
-    width: 23px;
-    height: 23px;
-    border-radius: 6px;
-    background-color: #fff;
-    border: 2px solid #ccc;
+  margin-right: 10px;
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  background-color: #fff;
+  height: 28px;
+  border: 2px solid #ccc;
 }
 
 .label {
-    color: #000;
-    font-family: Montserrat;
+  color: #000;
+  font-family: Montserrat;
+}
+
+.checkbox-icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
+.checkbox-icon.unchecked {
+  background-image: url("../../assets/unchecked.svg");
+}
+
+.checkbox-item:not(.checked):hover .checkbox-icon {
+  background-image: url("../../assets/hover_unchecked.svg");
+}
+
+.checkbox-item:not(.checked):active .checkbox-icon {
+  background-image: url("../../assets/mouseDown_unchecked.svg");
+  width: 29px;
+  height: 29px;
+  margin-right: 2.5px;
+}
+
+.checkbox-item.checked:active .checkbox-icon {
+  background-image: url("../../assets/mouseDown_checked.svg");
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.checkbox-icon.checked {
+  background-image: url("../../assets/checked.svg");
+}
+
+.checkbox-item.checked:hover .checkbox-icon {
+  background-image: url("../../assets/hover_checked.svg");
 }
